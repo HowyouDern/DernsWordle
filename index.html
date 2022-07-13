@@ -1,1 +1,26 @@
-<div></div>
+<div>Wordle</div>
+<div>I have a cat that has 3 kittens: Mopsy, Topsy & Spot.</div>
+<div>What is the Mothers name</div>
+<div><input type="text" id="user-guess" /></div>
+<div>
+  <button onclick="handleclick()">
+    Submit
+  </button>
+</div>
+<div id="results"></div>
+<script>
+  function handleclick() {
+    let word = "What";
+    console.log(word);
+
+    let resultsElem = document.getElementById("results");
+    resultsElem.innerHTML = word;
+
+    let userGuess = document.getElementById("user-guess").value;
+
+    console.log("data", userGuess, word, word === userGuess);
+    if (word == userGuess) {
+      console.log("Purrrrfect choice");
+    }
+  }
+</script>
